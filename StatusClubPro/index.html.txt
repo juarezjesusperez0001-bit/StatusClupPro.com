@@ -1,0 +1,1766 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#d4af37" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Portal profesional de Estatus Social: lujo, estilo de vida, networking, inversiones en experiencias, reseñas premium y contenidos exclusivos." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://www.statusclub.pro/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='84'>👑</text></svg>">
+  <title>StatusClub Pro — Lujo, Estilo y Networking</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="StatusClub Pro — Lujo, Estilo y Networking" />
+  <meta property="og:description" content="Tendencias de lujo, consejos de networking, reseñas premium y membresía exclusiva. Eleva tu imagen y tus conexiones." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.statusclub.pro/" />
+  <meta property="og:image" content="https://www.statusclub.pro/og-status.jpg" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="StatusClub Pro — Lujo, Estilo y Networking" />
+  <meta name="twitter:description" content="Contenido exclusivo para elevar tu estatus social." />
+  <meta name="twitter:image" content="https://www.statusclub.pro/og-status.jpg" />
+
+  <style>
+    :root{
+      --bg: #0b0c10;        /* negro obsidiana */
+      --panel: #101218;     /* panel profundo */
+      --card: #121725;      /* tarjeta */
+      --text: #e6e6ea;      /* texto principal */
+      --muted: #aab2c8;     /* texto secundario */
+      --brand: #d4af37;     /* dorado */
+      --brand-2: #f5d76e;   /* dorado claro */
+      --accent: #0ea5e9;    /* acento frío */
+      --ring: #94a3b8;      /* enfoque */
+      --good: #22c55e; --warn:#f59e0b; --bad:#ef4444;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --panel:#f7f7fb; --card:#f1f3f8; --text:#0f172a; --muted:#59647a }
+    }
+
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    body{ margin:0; font: 15px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Color Emoji"; background: radial-gradient(1100px 500px at 0% -10%, rgba(212,175,55,.18), transparent), var(--bg); color:var(--text) }
+    img{ max-width:100%; height:auto; display:block }
+    a{ color: var(--brand); text-decoration: none }
+    a:hover{ text-decoration: underline }
+    .container{ width:min(1200px, 92%); margin-inline:auto }
+
+    /* Header */
+    header{ position:sticky; top:0; z-index:60; backdrop-filter: blur(10px); background: color-mix(in oklab, var(--bg) 80%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--text) 12%, transparent) }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.75rem 0 }
+    .brand{ display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.2px }
+    .logo{ width:40px; height:40px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#231a0a; box-shadow:0 12px 36px rgba(212,175,55,.35) }
+    .menu{ display:flex; align-items:center; gap:1rem }
+    .menu a{ color:var(--text); opacity:.9 }
+    .menu a.active{ color: var(--accent) }
+    .menu-toggle{ display:none }
+    .searchbar{ display:flex; gap:.5rem; align-items:center; background:var(--panel); border:1px solid color-mix(in oklab, var(--text) 10%, transparent); padding:.45rem .6rem; border-radius:12px }
+    .searchbar input{ background:transparent; border:0; outline:0; color:var(--text); width:220px }
+    @media (max-width:960px){
+      .menu{ display:none }
+      .menu-toggle{ display:inline-flex; align-items:center; gap:.5rem; background:transparent; border:1px solid color-mix(in oklab, var(--text) 15%, transparent); color:var(--text); padding:.45rem .8rem; border-radius:999px }
+      .menu.open{ display:flex; position:absolute; inset:auto 1rem auto auto; top:64px; background:var(--panel); border:1px solid color-mix(in oklab, var(--text) 12%, transparent); border-radius:16px; padding:.5rem; flex-direction:column }
+      .searchbar input{ width:140px }
+    }
+
+    /* Botones */
+    .btn{ cursor:pointer; border-radius:12px; padding:.8rem 1rem; border:1px solid color-mix(in oklab, var(--text) 16%, transparent); background:transparent; color:var(--text); text-decoration: none; display: inline-block; text-align: center; font-size: 14px; transition: all 0.2s ease }
+    .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#231a0a; border:0; font-weight:800; box-shadow:0 10px 24px rgba(212,175,55,.35) }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.2) }
+
+    /* Hero */
+    .hero{ padding: 42px 0 24px; display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center }
+    .hero h1{ font-size: clamp(2rem, 2.3vw + 1.2rem, 3.1rem); line-height:1.05; margin:0 0 .6rem; letter-spacing:-.02em }
+    .sub{ color:var(--muted); max-width:65ch }
+    .badges{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.8rem }
+    .badge{ border:1px solid color-mix(in oklab, var(--text) 12%, transparent); background:transparent; padding:.25rem .55rem; border-radius:999px; font-size:.82rem }
+
+    .card{ background: var(--panel); border:1px solid color-mix(in oklab, var(--text) 12%, transparent); border-radius:16px; padding:1rem; box-shadow:0 10px 40px rgba(0,0,0,.25) }
+    .stats{ display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem; margin-top:1rem }
+    .stat{ text-align:center; border-radius:12px; padding:.8rem; background:linear-gradient(180deg, color-mix(in oklab, var(--panel) 70%, transparent), transparent); border:1px dashed color-mix(in oklab, var(--text) 14%, transparent) }
+    .stat .n{ font-weight:800; font-size:1.4rem }
+
+    section{ padding: 26px 0 }
+
+    /* Explorar */
+    .finder{ display:grid; grid-template-columns: 1fr; gap:1rem }
+    .filters{ display:grid; grid-template-columns: repeat(4, 1fr); gap:.8rem }
+    .filters select, .filters input{ width:100%; padding:.65rem .8rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--text) 14%, transparent); background: transparent; color:var(--text) }
+    .results{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem }
+    @media (max-width:1100px){ .results{ grid-template-columns: repeat(2,1fr) } }
+    @media (max-width:720px){ .hero{ grid-template-columns:1fr } .filters{ grid-template-columns: 1fr 1fr } .results{ grid-template-columns:1fr } }
+
+    .item{ position:relative; display:flex; flex-direction:column; gap:.5rem }
+    .item .thumb{ aspect-ratio: 16/9; overflow:hidden; border-radius:14px; background:#111827; border:1px solid color-mix(in oklab, var(--text) 10%, transparent) }
+    .meta{ display:flex; gap:.6rem; flex-wrap:wrap; color:var(--muted); font-size:.9rem }
+    .price{ font-weight:800 }
+
+    .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem }
+    @media (max-width:960px){ .grid{ grid-template-columns:1fr } }
+
+    /* Tabla comparativa */
+    table{ width:100%; border-collapse: collapse; overflow:auto }
+    th, td{ padding:.6rem .5rem; text-align:left; border-bottom:1px solid color-mix(in oklab, var(--text) 12%, transparent) }
+    th{ font-size:.92rem; color:var(--muted) }
+
+    /* Formularios */
+    form{ display:grid; gap:.5rem }
+    input, textarea, select{ width:100%; padding:.7rem .9rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--text) 14%, transparent); background: transparent; color:var(--text) }
+    input:focus, textarea:focus, select:focus{ outline:2px solid color-mix(in oklab, var(--ring) 55%, transparent) }
+
+    footer{ margin-top:40px; border-top:1px solid color-mix(in oklab, var(--text) 12%, transparent) }
+    .foot{ display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between; padding:1rem 0; color:var(--muted) }
+
+    /* Paywall modal */
+    .modal{ position:fixed; inset:0; display:none; place-items:center; background:rgba(0,0,0,.55); z-index:80 }
+    .modal.open{ display:grid }
+    .modal .box{ width:min(560px,92%); background:var(--card); border:1px solid color-mix(in oklab, var(--text) 14%, transparent); border-radius:18px; padding:1rem }
+
+    /* Loading states */
+    .loading{ opacity: 0.7; pointer-events: none }
+
+    /* Animaciones */
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Vista de artículos */
+    .article-view h2 {
+      color: var(--brand);
+      margin: 2rem 0 1rem;
+      font-size: 1.4rem;
+    }
+    
+    .article-view h3 {
+      color: var(--text);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .article-view h4 {
+      color: var(--text);
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .article-view blockquote {
+      background: var(--panel);
+      border-left: 4px solid var(--brand);
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+    }
+    
+    .article-view table {
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    
+    .article-view th {
+      background: var(--panel);
+      font-weight: 600;
+      color: var(--brand);
+    }
+    
+    .article-view ul, .article-view ol {
+      padding-left: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .article-view li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+
+  <!-- Structured Data: Organization + WebSite/SearchAction + ItemList (Top picks) + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"StatusClub Pro",
+    "url":"https://www.statusclub.pro/",
+    "logo":"https://www.statusclub.pro/logo.png",
+    "sameAs":["https://www.instagram.com/statusclubpro","https://www.youtube.com/@statusclubpro"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"StatusClub Pro",
+    "url":"https://www.statusclub.pro/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.statusclub.pro/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Principal">
+      <div class="brand" aria-label="StatusClub Pro">
+        <div class="logo" aria-hidden="true">👑</div>
+        <span>StatusClub Pro</span>
+      </div>
+      <nav class="menu" id="menu">
+        <a href="#explorar" class="active">Explorar</a>
+        <a href="#tendencias">Tendencias</a>
+        <a href="#premiums">Premium</a>
+        <a href="#guias">Guías</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn" href="#suscribir">Únete</a>
+      </nav>
+      <div class="searchbar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/></svg>
+        <input id="q" placeholder="Buscar: relojes, viajes, inmuebles…" autocomplete="off" />
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <div>
+        <h1>Construye tu <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent">red de alto valor</span> e incrementa tus ingresos</h1>
+        <p class="sub">Para profesionales ambiciosos: estrategias probadas de networking, inversiones en imagen que generan ROI, y acceso a oportunidades de negocio exclusivas. +8,950 ejecutivos ya lo usan.</p>
+        <div class="badges">
+          <span class="badge">💼 Networking Estratégico</span>
+          <span class="badge">📈 ROI en Imagen Personal</span>
+          <span class="badge">🎯 Oportunidades Exclusivas</span>
+        </div>
+        <div class="stats" aria-label="Estadísticas destacadas">
+          <div class="stat"><div class="n" id="suscritos">8,950</div><div class="muted">Ejecutivos activos</div></div>
+          <div class="stat"><div class="n">$2.4M</div><div class="muted">Deals generados</div></div>
+          <div class="stat"><div class="n">340%</div><div class="muted">ROI promedio</div></div>
+          <div class="stat"><div class="n">47</div><div class="muted">Países</div></div>
+        </div>
+        <div style="margin-top:1rem; display:flex; gap:.7rem; flex-wrap:wrap">
+          <a href="#explorar" class="btn primary">Explorar hoy</a>
+          <a href="#premiums" class="btn">Ver premium</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>🔥 Ofertas destacadas esta semana</h3>
+        <p class="muted">Productos y experiencias curadas con enlaces de afiliados verificados.</p>
+        <div style="display: grid; gap: 1rem; margin-top: 1rem">
+          <div style="border: 1px solid var(--brand); border-radius: 8px; padding: 1rem; background: linear-gradient(135deg, rgba(212,175,55,0.1), transparent)">
+            <strong>Rolex Submariner</strong><br>
+            <span style="color: var(--muted); font-size: 0.9em">Desde $8,100 USD</span><br>
+            <a href="https://amzn.to/3rolex" target="_blank" class="btn primary" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.5rem 0.8rem" data-track="affiliate_click" data-id="rolex1" data-value="405" data-category="Relojes">Ver en Amazon</a>
+          </div>
+          <div style="border: 1px solid var(--accent); border-radius: 8px; padding: 1rem">
+            <strong>Viaje Dubai Premium</strong><br>
+            <span style="color: var(--muted); font-size: 0.9em">7 días desde $2,890</span><br>
+            <a href="https://booking.com/dubai-premium" target="_blank" class="btn" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.5rem 0.8rem" data-track="affiliate_click" data-id="dubai1" data-value="145" data-category="Viajes">Reservar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORAR (Catálogo aspiracional) -->
+    <section class="container" id="explorar">
+      <h2>Explora por categoría</h2>
+      <div class="finder card">
+        <div class="filters">
+          <select id="fCat" aria-label="Categoría">
+            <option value="">Todas las categorías</option>
+            <option>Relojes</option>
+            <option>Moda</option>
+            <option>Viajes</option>
+            <option>Inmuebles</option>
+            <option>Experiencias</option>
+            <option>Gadgets</option>
+            <option>Automóviles</option>
+            <option>Joyería</option>
+          </select>
+          <select id="fNivel" aria-label="Nivel">
+            <option value="">Todos los niveles</option>
+            <option>Accesible</option>
+            <option>Premium</option>
+            <option>Alta Gama</option>
+            <option>Ultra</option>
+          </select>
+          <select id="fReg" aria-label="Región">
+            <option value="">Todas las regiones</option>
+            <option>América</option>
+            <option>Europa</option>
+            <option>Asia</option>
+            <option>Global</option>
+          </select>
+          <input id="fPrecio" type="number" inputmode="numeric" placeholder="Presupuesto máx (USD)" aria-label="Presupuesto máximo" />
+        </div>
+        <div class="results" id="results" role="list"></div>
+      </div>
+    </section>
+
+    <!-- TENDENCIAS / ARTÍCULOS -->
+    <section class="container" id="tendencias">
+      <h2>Tendencias & artículos exclusivos</h2>
+      <div class="grid" role="list" id="posts"></div>
+    </section>
+
+    <!-- PREMIUM (paywall demo) -->
+    <section class="container" id="premiums">
+      <h2>Contenido Premium</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>📊 Reporte de Inversiones en Status 2025</h3>
+          <p class="muted">Análisis completo de ROI en relojes, viajes, y experiencias premium. Incluye calculadora de retorno social.</p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+            <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="investment_report">Acceder ($197 valor)</button>
+          </div>
+        </article>
+        <article class="card">
+          <h3>🎩 Master Class: Etiqueta Ejecutiva</h3>
+          <p class="muted">Protocolo para cenas de negocios, eventos de networking y presentaciones de alto nivel. Video HD + PDF.</p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+            <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="etiquette_masterclass">Ver ahora</button>
+          </div>
+        </article>
+        <article class="card">
+          <h3>🚀 Curso: Personal Branding Ejecutivo</h3>
+          <p class="muted">6 módulos completos: narrativa personal, presencia digital, networking estratégico y posicionamiento profesional.</p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+            <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="branding_course">Inscribirme</button>
+          </div>
+        </article>
+      </div>
+      
+      <div class="card" style="margin-top: 2rem; border: 2px solid var(--brand)">
+        <h3 style="margin-top: 0">🎯 Beneficios de la Membresía</h3>
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem">
+          <div>
+            <h4>Elite ($39/mes)</h4>
+            <ul style="color: var(--muted); line-height: 1.6">
+              <li>✅ Acceso a todos los reportes premium</li>
+              <li>✅ Masterclasses exclusivas (12/año)</li>
+              <li>✅ Descuentos en productos curados (10-20%)</li>
+              <li>✅ Networking events privados</li>
+              <li>✅ Consultoría personal (1h/mes)</li>
+              <li>✅ Comunidad privada en Discord</li>
+            </ul>
+            <button class="btn primary" data-plan="elite" style="margin-top: 1rem">Comenzar Elite</button>
+          </div>
+          <div>
+            <h4>Básico ($9/mes)</h4>
+            <ul style="color: var(--muted); line-height: 1.6">
+              <li>✅ Newsletter semanal exclusivo</li>
+              <li>✅ Guías mensuales en PDF</li>
+              <li>✅ Acceso a contenido de archivo</li>
+              <li>✅ Descuentos básicos (5%)</li>
+              <li>✅ Comunidad general</li>
+            </ul>
+            <button class="btn" data-plan="basic" style="margin-top: 1rem">Comenzar Básico</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUÍAS -->
+    <section class="container" id="guias">
+      <h2>Guías estratégicas gratuitas</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>👔 Vestimenta que Comunica Poder</h3>
+          <p class="muted">Cómo construir un armario cápsula que transmita autoridad sin ostentar. Incluye marcas recomendadas por nivel de inversión.</p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+            <button class="btn" onclick="showGuide('power_dressing')" data-track="guide_view" data-id="power_dressing">Leer guía</button>
+            <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="guide_pdf_power">PDF Premium</button>
+          </div>
+        </article>
+        <article class="card">
+          <h3>🤝 Networking: De Desconocido a Referente</h3>
+          <p class="muted">Sistema probado para construir relaciones valiosas. Plantillas de email, scripts de conversación y seguimiento estratégico.</p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+            <button class="btn" onclick="showGuide('networking_system')" data-track="guide_view" data-id="networking_system">Leer guía</button>
+            <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="guide_pdf_networking">PDF Premium</button>
+          </div>
+        </article>
+        <article class="card">
+          <h3>🌍 Protocolo Internacional de Negocios</h3>
+          <p class="muted">Códigos de etiqueta para Asia, Europa y América. Evita errores costosos en reuniones internacionales.</p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+            <button class="btn" onclick="showGuide('international_protocol')" data-track="guide_view" data-id="international_protocol">Leer guía</button>
+            <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="guide_pdf_protocol">PDF Premium</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="container" id="suscribir" aria-labelledby="suscribir-heading">
+      <div class="card" style="max-width: 600px; margin: 0 auto">
+        <h2 id="suscribir-heading" style="text-align: center; margin-top: 0">📧 Newsletter StatusClub</h2>
+        <p style="text-align: center; color: var(--muted)">Recibe cada martes análisis exclusivos, oportunidades de networking y ofertas curadas para ejecutivos ambiciosos.</p>
+        <form id="formNewsletter" novalidate style="margin-top: 1.5rem">
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: 0.5rem">
+            <input id="email" type="email" name="email" placeholder="tu@email.com" autocomplete="email" required style="margin: 0" />
+            <button class="btn primary" type="submit">Suscribirme</button>
+          </div>
+          <small class="muted" id="msg" style="margin-top: 0.5rem; display: block"></small>
+        </form>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; color: var(--muted); font-size: 0.85rem">
+          <span>✅ Sin spam</span>
+          <span>✅ Cancela cuando quieras</span>
+          <span>✅ +8,950 suscriptores</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="container" id="contacto">
+      <h2>Contacto profesional</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 2rem">
+        <form id="formContacto" novalidate class="card">
+          <h3 style="margin-top: 0">Envíanos un mensaje</h3>
+          <label for="nombre">Nombre completo</label>
+          <input id="nombre" name="nombre" placeholder="Tu nombre" required />
+          <label for="empresa">Empresa/Posición</label>
+          <input id="empresa" name="empresa" placeholder="CEO en TechCorp" />
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="¿En qué podemos ayudarte? Colaboraciones, consultoría, eventos..." rows="4" required></textarea>
+          <button class="btn primary" type="submit">Enviar mensaje</button>
+          <small class="muted" id="msgContacto"></small>
+        </form>
+        
+        <div class="card">
+          <h3 style="margin-top: 0">Información de contacto</h3>
+          <div style="display: grid; gap: 1rem; margin-top: 1rem">
+            <div>
+              <strong>📧 Email general</strong><br>
+              <a href="mailto:hola@statusclub.pro">hola@statusclub.pro</a>
+            </div>
+            <div>
+              <strong>💼 Colaboraciones empresariales</strong><br>
+              <a href="mailto:business@statusclub.pro">business@statusclub.pro</a>
+            </div>
+            <div>
+              <strong>📱 Redes sociales</strong><br>
+              <a href="https://linkedin.com/company/statusclub-pro" target="_blank">LinkedIn</a> ·
+              <a href="https://instagram.com/statusclubpro" target="_blank">Instagram</a> ·
+              <a href="https://youtube.com/@statusclubpro" target="_blank">YouTube</a>
+            </div>
+            <div>
+              <strong>⏰ Tiempo de respuesta</strong><br>
+              <span style="color: var(--muted)">24-48 horas en días laborales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Paywall modal -->
+  <div class="modal" id="paywall">
+    <div class="box">
+      <h3 style="margin-top:0">🔐 Contenido Premium</h3>
+      <p class="muted">Este contenido es exclusivo para miembros. Únete para acceder a reportes, masterclasses y nuestra comunidad privada.</p>
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap: 1rem; margin: 1.5rem 0">
+        <div class="card" style="border-style:dashed; border-color: var(--muted)">
+          <h4 style="margin-top: 0">Básico</h4>
+          <div style="font-size: 2rem; color: var(--brand); font-weight: 800">$9<span style="font-size: 1rem; color: var(--muted)">/mes</span></div>
+          <ul style="margin: 1rem 0; padding-left: 1rem; color: var(--muted); line-height: 1.5">
+            <li>Newsletter exclusivo semanal</li>
+            <li>Guías mensuales en PDF</li>
+            <li>Archivo de contenido</li>
+          </ul>
+          <button class="btn" data-plan="basic">Comenzar Básico</button>
+        </div>
+        <div class="card" style="border-style:solid; border-color: var(--brand)">
+          <h4 style="margin-top: 0">Elite <span style="color: var(--brand); font-size: 0.8rem">RECOMENDADO</span></h4>
+          <div style="font-size: 2rem; color: var(--brand); font-weight: 800">$39<span style="font-size: 1rem; color: var(--muted)">/mes</span></div>
+          <ul style="margin: 1rem 0; padding-left: 1rem; color: var(--muted); line-height: 1.5">
+            <li>Todo lo del Básico +</li>
+            <li>Masterclasses exclusivas</li>
+            <li>Reportes de inversión premium</li>
+            <li>Eventos de networking privados</li>
+            <li>Consultoría mensual 1:1</li>
+          </ul>
+          <button class="btn primary" data-plan="elite">Comenzar Elite</button>
+        </div>
+      </div>
+      <div style="text-align: center; margin: 1rem 0; color: var(--muted); font-size: 0.9rem">
+        💳 Pago seguro · ❌ Cancela cuando quieras · 🔄 Garantía 30 días
+      </div>
+      <div style="display:flex; gap:.5rem; justify-content:flex-end">
+        <button class="btn" id="closePaywall">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span> StatusClub Pro. Elevando el estatus profesional desde 2024.</div>
+      <div>
+        <a href="/privacidad">Privacidad</a> ·
+        <a href="/terminos">Términos</a> ·
+        <a href="mailto:hola@statusclub.pro">hola@statusclub.pro</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Datos de productos reales -->
+  <script>
+    const ITEMS = [
+      // Relojes de lujo
+      { 
+        id:'rw1', cat:'Relojes', nivel:'Alta Gama', region:'Global', 
+        nombre:'Rolex Submariner Date', precio:8900, rating:4.9, 
+        img:'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://amzn.to/3rolex-submariner',
+        description: 'Icónico reloj de buceo con certificación COSC'
+      },
+      { 
+        id:'rw2', cat:'Relojes', nivel:'Premium', region:'Global', 
+        nombre:'Omega Speedmaster Professional', precio:5200, rating:4.8, 
+        img:'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://amzn.to/3omega-speedmaster',
+        description: 'El reloj que fue a la Luna'
+      },
+      { 
+        id:'rw3', cat:'Relojes', nivel:'Accesible', region:'Global', 
+        nombre:'Tudor Black Bay 58', precio:3200, rating:4.7, 
+        img:'https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://amzn.to/3tudor-blackbay',
+        description: 'Elegancia vintage con movimiento suizo'
+      },
+
+      // Moda masculina premium
+      { 
+        id:'md1', cat:'Moda', nivel:'Premium', region:'Europa', 
+        nombre:'Blazer Brunello Cucinelli', precio:2800, rating:4.9, 
+        img:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://brunellocucinelli.com/blazer',
+        description: 'Cashmere italiano hecho a mano'
+      },
+      { 
+        id:'md2', cat:'Moda', nivel:'Alta Gama', region:'Europa', 
+        nombre:'Traje Tom Ford', precio:4200, rating:4.8, 
+        img:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://tomford.com/mens-suits',
+        description: 'Sastrería de lujo con corte contemporáneo'
+      },
+      { 
+        id:'md3', cat:'Moda', nivel:'Accesible', region:'Global', 
+        nombre:'Camisa Hugo Boss', precio:180, rating:4.5, 
+        img:'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://hugoboss.com/shirts',
+        description: 'Algodón egipcio de primera calidad'
+      },
+
+      // Viajes de lujo
+      { 
+        id:'vj1', cat:'Viajes', nivel:'Ultra', region:'Asia', 
+        nombre:'Four Seasons Maldivas (7 noches)', precio:8500, rating:4.9, 
+        img:'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://booking.com/four-seasons-maldives',
+        description: 'Villa sobre el agua con mayordomo personal'
+      },
+      { 
+        id:'vj2', cat:'Viajes', nivel:'Premium', region:'Europa', 
+        nombre:'Hotel George V París (3 noches)', precio:2200, rating:4.8, 
+        img:'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://booking.com/george-v-paris',
+        description: 'Lujo parisino en los Campos Elíseos'
+      },
+      { 
+        id:'vj3', cat:'Viajes', nivel:'Accesible', region:'América', 
+        nombre:'Napa Valley Wine Tour (2 días)', precio:890, rating:4.6, 
+        img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://viator.com/napa-valley-tour',
+        description: 'Cata premium en las mejores viñas'
+      },
+
+      // Inmuebles y propiedades
+      { 
+        id:'im1', cat:'Inmuebles', nivel:'Ultra', region:'Europa', 
+        nombre:'Penthouse en Monaco (semana)', precio:12000, rating:4.9, 
+        img:'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://vrbo.com/monaco-penthouse',
+        description: 'Vista panorámica al puerto y casino'
+      },
+      { 
+        id:'im2', cat:'Inmuebles', nivel:'Premium', region:'América', 
+        nombre:'Villa en Hamptons (fin de semana)', precio:3500, rating:4.7, 
+        img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://airbnb.com/hamptons-villa',
+        description: 'Casa de verano con playa privada'
+      },
+
+      // Experiencias exclusivas
+      { 
+        id:'ex1', cat:'Experiencias', nivel:'Ultra', region:'Global', 
+        nombre:'Cena privada con chef Michelin', precio:1200, rating:4.9, 
+        img:'https://images.unsplash.com/photo-1514362545857-3bc16c4c76f0?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://chefstable.com/private-dining',
+        description: 'Menú degustación personalizado en tu hogar'
+      },
+      { 
+        id:'ex2', cat:'Experiencias', nivel:'Premium', region:'Europa', 
+        nombre:'Masterclass de whisky escocés', precio:450, rating:4.7, 
+        img:'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://masterofmalt.com/masterclass',
+        description: 'Cata dirigida por maestro destilador'
+      },
+      { 
+        id:'ex3', cat:'Experiencias', nivel:'Accesible', region:'América', 
+        nombre:'Clase de etiqueta empresarial', precio:185, rating:4.5, 
+        img:'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://protocolustitute.com/business-etiquette',
+        description: 'Protocolo para cenas de negocios'
+      },
+
+      // Gadgets y tecnología
+      { 
+        id:'gd1', cat:'Gadgets', nivel:'Premium', region:'Global', 
+        nombre:'iPhone 15 Pro Max', precio:1199, rating:4.6, 
+        img:'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://apple.com/iphone-15-pro',
+        description: 'Último modelo con titanio y cámara profesional'
+      },
+      { 
+        id:'gd2', cat:'Gadgets', nivel:'Alta Gama', region:'Global', 
+        nombre:'Bang & Olufsen Beoplay H95', precio:800, rating:4.8, 
+        img:'https://images.unsplash.com/photo-1518442158777-a1bf050f1612?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://bang-olufsen.com/headphones',
+        description: 'Auriculares premium con cancelación de ruido'
+      },
+
+      // Automóviles (experiencias de manejo)
+      { 
+        id:'au1', cat:'Automóviles', nivel:'Ultra', region:'Europa', 
+        nombre:'Ferrari F8 Tributo (fin de semana)', precio:2800, rating:4.9, 
+        img:'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://luxurycarhire.com/ferrari',
+        description: 'Experiencia de manejo en Monaco'
+      },
+      { 
+        id:'au2', cat:'Automóviles', nivel:'Premium', region:'América', 
+        nombre:'Porsche 911 Turbo S (día)', precio:650, rating:4.7, 
+        img:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://turo.com/porsche-911',
+        description: 'Deportivo alemán por un día'
+      },
+
+      // Joyería
+      { 
+        id:'jy1', cat:'Joyería', nivel:'Alta Gama', region:'Global', 
+        nombre:'Gemelos Tiffany & Co.', precio:1200, rating:4.8, 
+        img:'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop',
+        affiliate: 'https://tiffany.com/cufflinks',
+        description: 'Plata sterling con grabado personalizado'
+      }
+    ];
+
+    const GUIDES = [
+      {
+        id: 'power_dressing',
+        title: '👔 Vestimenta que Comunica Poder',
+        excerpt: 'Cómo construir un armario cápsula que transmita autoridad sin ostentar. Incluye marcas recomendadas por nivel de inversión.',
+        cover: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop',
+        category: 'Imagen Personal',
+        readTime: '12 min',
+        author: 'Roberto Vega'
+      },
+      {
+        id: 'networking_system',
+        title: '🤝 Networking: De Desconocido a Referente',
+        excerpt: 'Sistema probado para construir relaciones valiosas. Plantillas de email, scripts de conversación y seguimiento estratégico.',
+        cover: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop',
+        category: 'Networking',
+        readTime: '15 min',
+        author: 'Ana Sofía Ruiz'
+      },
+      {
+        id: 'international_protocol',
+        title: '🌍 Protocolo Internacional de Negocios',
+        excerpt: 'Códigos de etiqueta para Asia, Europa y América. Evita errores costosos en reuniones internacionales.',
+        cover: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop',
+        category: 'Protocolo',
+        readTime: '18 min',
+        author: 'David Chen'
+      }
+    ];
+
+    const POSTS = [
+      { 
+        id:'p1', 
+        title:'Los 15 relojes que más valor retienen en 2025', 
+        excerpt:'Análisis detallado de inversión: desde Rolex hasta Patek Philippe. Incluye predicciones de mercado y recomendaciones por presupuesto.',
+        cover:'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?q=80&w=1200&auto=format&fit=crop',
+        category: 'Inversiones',
+        readTime: '8 min',
+        date: '2025-01-15',
+        author: 'Carlos Mendoza'
+      },
+      { 
+        id:'p2', 
+        title:'Networking sin agenda oculta: cómo crear valor real', 
+        excerpt:'El arte de construir relaciones auténticas que abren oportunidades. 7 estrategias probadas por CEOs de Fortune 500.',
+        cover:'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop',
+        category: 'Networking',
+        readTime: '12 min',
+        date: '2025-01-12',
+        author: 'Ana Sofía Ruiz'
+      },
+      { 
+        id:'p3', 
+        title:'Guía completa: vestirse para cada nivel ejecutivo', 
+        excerpt:'Del junior manager al C-Suite: códigos de vestimenta que comunican autoridad sin ostentar. Incluye guía de marcas y presupuestos.',
+        cover:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
+        category: 'Imagen',
+        readTime: '15 min',
+        date: '2025-01-10',
+        author: 'Roberto Vega'
+      },
+      { 
+        id:'p4', 
+        title:'Los 10 destinos de lujo que todo ejecutivo debe conocer', 
+        excerpt:'Viajes que impresionan en conversaciones de negocios. Desde Napa Valley hasta Dubai: experiencias que generan ROI social.',
+        cover:'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?q=80&w=1200&auto=format&fit=crop',
+        category: 'Viajes',
+        readTime: '10 min',
+        date: '2025-01-08',
+        author: 'Marina López'
+      },
+      { 
+        id:'p5', 
+        title:'Protocolo internacional: errores que arruinan deals', 
+        excerpt:'Cases reales de ejecutivos que perdieron contratos millonarios por errores culturales. Guía práctica para Asia, Europa y Medio Oriente.',
+        cover:'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop',
+        category: 'Protocolo',
+        readTime: '14 min',
+        date: '2025-01-05',
+        author: 'David Chen'
+      },
+      { 
+        id:'p6', 
+        title:'Inversión en experiencias vs. objetos: qué genera más status', 
+        excerpt:'Estudio exclusivo: por qué un viaje a Kyoto puede ser mejor inversión que un Rolex. Datos de 2,000 ejecutivos encuestados.',
+        cover:'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=1200&auto=format&fit=crop',
+        category: 'Inversiones',
+        readTime: '11 min',
+        date: '2025-01-03',
+        author: 'Patricia Morales'
+      }
+    ];
+
+    // Utilidades mejoradas
+    const el = (sel, root=document) => root.querySelector(sel);
+    const els = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+    function formatUSD(n){ return new Intl.NumberFormat('es-MX', {style:'currency', currency:'USD', maximumFractionDigits:0}).format(n); }
+    function formatDate(dateStr) {
+      return new Date(dateStr).toLocaleDateString('es-MX', { 
+        year: 'numeric', month: 'short', day: 'numeric' 
+      });
+    }
+
+    // Analytics avanzado
+    window.analyticsQueue = [];
+    window.revenueTracking = {
+      conversionValue: 0,
+      affiliateClicks: 0,
+      premiumInterest: 0,
+      sessionStart: Date.now(),
+      pageViews: 1
+    };
+    
+    function track(evt, data){ 
+      const event = {
+        evt, 
+        data, 
+        t: Date.now(), 
+        sessionId: getSessionId(),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer
+      };
+      analyticsQueue.push(event); 
+      
+      // Revenue tracking mejorado
+      if(evt === 'affiliate_click') {
+        revenueTracking.affiliateClicks++;
+        revenueTracking.conversionValue += (data.estimatedValue || 50);
+      }
+      if(evt === 'premium_interest') {
+        revenueTracking.premiumInterest++;
+      }
+      
+      // Envío inmediato para eventos críticos
+      if(['subscribe', 'affiliate_click'].includes(evt)) {
+        sendAnalytics();
+      }
+    }
+    
+    function getSessionId() {
+      let sid = sessionStorage.getItem('sc_session');
+      if(!sid) {
+        sid = 'sc_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        sessionStorage.setItem('sc_session', sid);
+      }
+      return sid;
+    }
+
+    function sendAnalytics() {
+      if(analyticsQueue.length > 0) {
+        console.log('📊 Revenue Analytics:', revenueTracking);
+        console.log('📈 Events Queue:', analyticsQueue);
+        // En producción: enviar a tu endpoint
+        // fetch('/api/analytics', {method: 'POST', body: JSON.stringify({events: analyticsQueue, revenue: revenueTracking})});
+      }
+    }
+    
+    // Enhanced click tracking
+    document.addEventListener('click', (e)=>{
+      const el = e.target.closest('[data-track]');
+      if(el){ 
+        const estimatedValue = el.dataset.value ? parseFloat(el.dataset.value) : 0;
+        track(el.dataset.track, {
+          id: el.dataset.id, 
+          estimatedValue,
+          category: el.dataset.category,
+          position: el.getBoundingClientRect().top,
+          timestamp: Date.now()
+        }); 
+      }
+    });
+
+    // Menú móvil mejorado
+    const menu = document.getElementById('menu');
+    const toggle = document.getElementById('menuToggle');
+    toggle?.addEventListener('click',()=>{
+      const isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      track('menu_toggle', {isOpen});
+    });
+
+    // Render de productos mejorado
+    function renderItems(list){
+      const results = el('#results');
+      if(list.length === 0) {
+        results.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--muted)">
+            <h3>No encontramos productos con esos filtros</h3>
+            <p>Intenta ajustar los criterios de búsqueda</p>
+          </div>
+        `;
+        return;
+      }
+      
+      results.innerHTML = list.map(x=>`
+        <article class="card item" role="listitem">
+          <div class="thumb">
+            <img loading="lazy" alt="${x.nombre}" src="${x.img}" style="width:100%;height:100%;object-fit:cover"/>
+          </div>
+          <div style="padding: 0.5rem 0">
+            <h3 style="margin:.2rem 0 .1rem; font-size: 1.1rem; line-height: 1.3">${x.nombre}</h3>
+            <p style="color: var(--muted); font-size: 0.9rem; margin: 0.3rem 0">${x.description || ''}</p>
+            <div class="meta" style="margin: 0.5rem 0">
+              <span class="badge">${x.cat}</span>
+              <span class="badge">${x.nivel}</span>
+              <span class="badge">${x.region}</span>
+              <strong class="price" style="color: var(--brand)">${formatUSD(x.precio)}</strong>
+            </div>
+            <div style="display:flex; gap:.5rem; margin-top:.8rem">
+              <a href="${x.affiliate}" target="_blank" rel="noopener" class="btn primary" 
+                 data-track="affiliate_click" data-id="${x.id}" data-value="${x.precio * 0.05}" data-category="${x.cat}"
+                 style="flex: 1; text-decoration: none">
+                Ver oferta
+              </a>
+              <button class="btn" data-track="premium_interest" data-open-paywall style="white-space: nowrap">
+                Premium
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Filtros mejorados
+    function applyFilters(){
+      const q = el('#q').value.toLowerCase().trim();
+      const c = el('#fCat').value; 
+      const n = el('#fNivel').value; 
+      const r = el('#fReg').value; 
+      const p = parseFloat(el('#fPrecio').value || '0');
+      
+      const filtered = ITEMS.filter(x=>{
+        const matchesSearch = !q || `${x.nombre} ${x.cat} ${x.nivel} ${x.region} ${x.description}`.toLowerCase().includes(q);
+        const matchesCategory = !c || x.cat === c;
+        const matchesLevel = !n || x.nivel === n;
+        const matchesRegion = !r || x.region === r;
+        const matchesPrice = !p || x.precio <= p;
+        
+        return matchesSearch && matchesCategory && matchesLevel && matchesRegion && matchesPrice;
+      });
+      
+      renderItems(filtered);
+      track('filter_applied', {
+        results: filtered.length,
+        filters: {category: c, level: n, region: r, maxPrice: p, search: q}
+      });
+    }
+
+    // Event listeners para filtros
+    ['#q','#fCat','#fNivel','#fReg','#fPrecio'].forEach(sel=>{
+      const element = el(sel);
+      element.addEventListener('input', applyFilters);
+      element.addEventListener('change', applyFilters);
+    });
+
+    // Render de artículos mejorado
+    function renderPosts() {
+      const posts = el('#posts');
+      posts.innerHTML = POSTS.map(p=>`
+        <article class="card" role="listitem">
+          <div class="thumb" style="aspect-ratio:16/9; border-radius:14px; overflow:hidden; border:1px solid color-mix(in oklab, var(--text) 10%, transparent)">
+            <img loading="lazy" alt="${p.title}" src="${p.cover}" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <div style="padding: 0.5rem 0">
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--muted)">
+              <span class="badge">${p.category}</span>
+              <span>${p.readTime}</span>
+              <span>${formatDate(p.date)}</span>
+            </div>
+            <h3 style="margin: 0 0 0.5rem; line-height: 1.3">${p.title}</h3>
+            <p class="muted" style="line-height: 1.5; margin-bottom: 1rem">${p.excerpt}</p>
+            <div style="display: flex; gap: 0.5rem; align-items: center; justify-content: space-between">
+              <small style="color: var(--muted)">Por ${p.author}</small>
+              <div style="display: flex; gap: 0.5rem">
+                <button class="btn" onclick="showArticle('${p.id}')" data-track="read_post" data-id="${p.id}">Leer</button>
+                <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="article_${p.id}">Premium</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Sistema de navegación de guías
+    function showGuide(guideId) {
+      const guide = GUIDES.find(g => g.id === guideId);
+      if (!guide) return;
+      
+      // Crear vista de la guía
+      const guideView = `
+        <div class="guide-view" id="guideView" style="
+          position: fixed; inset: 0; z-index: 90; 
+          background: var(--bg); overflow-y: auto;
+          animation: slideInRight 0.3s ease;
+        ">
+          <div class="container" style="max-width: 800px; padding: 2rem 1rem">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem">
+              <button onclick="closeGuide()" class="btn" style="padding: 0.5rem 1rem">
+                ← Volver a guías
+              </button>
+              <div style="flex: 1"></div>
+              <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="guide_premium_${guide.id}">
+                📄 Descargar PDF Premium
+              </button>
+            </div>
+            
+            <article class="card" style="padding: 2rem">
+              <div style="margin-bottom: 1.5rem">
+                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--muted)">
+                  <span class="badge">${guide.category}</span>
+                  <span>${guide.readTime}</span>
+                  <span>📖 Guía gratuita</span>
+                </div>
+                <h1 style="margin: 0 0 1rem; line-height: 1.2; font-size: clamp(1.8rem, 3vw, 2.5rem)">${guide.title}</h1>
+                <p style="color: var(--muted); font-size: 1.1rem; line-height: 1.6">${guide.excerpt}</p>
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid color-mix(in oklab, var(--text) 12%, transparent)">
+                  <span style="color: var(--brand); font-weight: 600">Por ${guide.author}</span>
+                </div>
+              </div>
+              
+              <div style="line-height: 1.7; font-size: 1.05rem">
+                ${getGuideContent(guide.id)}
+              </div>
+              
+              <div style="margin-top: 2rem; padding: 1.5rem; background: var(--panel); border-radius: 12px; border: 1px solid var(--brand)">
+                <h3 style="margin: 0 0 1rem; color: var(--brand)">💎 Lleva esta guía contigo</h3>
+                <p style="margin: 0 0 1rem; color: var(--muted)">Descarga la versión premium en PDF con:</p>
+                <ul style="color: var(--muted); margin: 0 0 1rem">
+                  <li>✅ Versión extendida con 50% más contenido</li>
+                  <li>✅ Checklist imprimibles</li>
+                  <li>✅ Plantillas y recursos descargables</li>
+                  <li>✅ Actualizaciones de por vida</li>
+                </ul>
+                <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="guide_pdf_${guide.id}" style="width: 100%">
+                  Obtener PDF Premium
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      `;
+      
+      // Insertar en el DOM
+      document.body.insertAdjacentHTML('beforeend', guideView);
+      document.body.style.overflow = 'hidden';
+      
+      // Track evento
+      track('guide_opened', {id: guideId, title: guide.title});
+    }
+
+    function closeGuide() {
+      const guideView = el('#guideView');
+      if (guideView) {
+        guideView.remove();
+        document.body.style.overflow = 'auto';
+        track('guide_closed', {});
+      }
+    }
+
+    // Sistema de navegación de artículos
+    function showArticle(articleId) {
+      const article = POSTS.find(p => p.id === articleId);
+      if (!article) return;
+      
+      // Crear vista del artículo
+      const articleView = `
+        <div class="article-view" id="articleView" style="
+          position: fixed; inset: 0; z-index: 90; 
+          background: var(--bg); overflow-y: auto;
+          animation: slideInRight 0.3s ease;
+        ">
+          <div class="container" style="max-width: 800px; padding: 2rem 1rem">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem">
+              <button onclick="closeArticle()" class="btn" style="padding: 0.5rem 1rem">
+                ← Volver
+              </button>
+              <div style="flex: 1"></div>
+              <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="full_article_${article.id}">
+                🔐 Versión Premium
+              </button>
+            </div>
+            
+            <article class="card" style="padding: 2rem">
+              <div style="margin-bottom: 1.5rem">
+                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--muted)">
+                  <span class="badge">${article.category}</span>
+                  <span>${article.readTime}</span>
+                  <span>${formatDate(article.date)}</span>
+                </div>
+                <h1 style="margin: 0 0 1rem; line-height: 1.2; font-size: clamp(1.8rem, 3vw, 2.5rem)">${article.title}</h1>
+                <p style="color: var(--muted); font-size: 1.1rem; line-height: 1.6">${article.excerpt}</p>
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid color-mix(in oklab, var(--text) 12%, transparent)">
+                  <span style="color: var(--brand); font-weight: 600">Por ${article.author}</span>
+                </div>
+              </div>
+              
+              <div style="line-height: 1.7; font-size: 1.05rem">
+                ${getArticleContent(article.id)}
+              </div>
+              
+              <div style="margin-top: 2rem; padding: 1.5rem; background: var(--panel); border-radius: 12px; border: 1px solid var(--brand)">
+                <h3 style="margin: 0 0 1rem; color: var(--brand)">💎 Accede al contenido completo</h3>
+                <p style="margin: 0 0 1rem; color: var(--muted)">Este es solo un preview. Los miembros Elite y Básico tienen acceso al artículo completo con:</p>
+                <ul style="color: var(--muted); margin: 0 0 1rem">
+                  <li>✅ Análisis detallado con datos exclusivos</li>
+                  <li>✅ Estudios de caso reales</li>
+                  <li>✅ Plantillas descargables</li>
+                  <li>✅ Videos explicativos HD</li>
+                </ul>
+                <button class="btn primary" data-open-paywall data-track="premium_interest" data-content="full_article_${article.id}" style="width: 100%">
+                  Desbloquear contenido completo
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      `;
+      
+      // Insertar en el DOM
+      document.body.insertAdjacentHTML('beforeend', articleView);
+      document.body.style.overflow = 'hidden';
+      
+      // Track evento
+      track('article_opened', {id: articleId, title: article.title});
+    }
+
+    function closeArticle() {
+      const articleView = el('#articleView');
+      if (articleView) {
+        articleView.remove();
+        document.body.style.overflow = 'auto';
+        track('article_closed', {});
+      }
+    }
+
+    // Contenido de las guías (editable aquí)
+    function getGuideContent(guideId) {
+      const content = {
+        'power_dressing': `
+          <h2>🎯 El Impacto de la Vestimenta en el Éxito Profesional</h2>
+          <p>Un estudio de Harvard Business School reveló que <strong>los ejecutivos con imagen sólida ganan 20% más</strong> y tienen 3x más probabilidades de ser promovidos. La vestimenta no es vanidad, es estrategia.</p>
+
+          <h3>📊 Los Números que Importan:</h3>
+          <ul>
+            <li><strong>Primera impresión:</strong> Se forma en 7 segundos</li>
+            <li><strong>55% del impacto</strong> viene del lenguaje corporal y apariencia</li>
+            <li><strong>38% del tono de voz</strong>, solo 7% de las palabras</li>
+            <li><strong>23% más probabilidad</strong> de cerrar deals bien vestido</li>
+          </ul>
+
+          <h3>🎨 La Fórmula del Armario Ejecutivo</h3>
+          <p><strong>Regla 70-20-10:</strong></p>
+          <ul>
+            <li><strong>70% Base clásica:</strong> Piezas atemporales de calidad</li>
+            <li><strong>20% Tendencias:</strong> Elementos actuales pero discretos</li>
+            <li><strong>10% Personalidad:</strong> Detalles únicos que te distingan</li>
+          </ul>
+
+          <h3>💼 Armario Básico por Nivel Profesional</h3>
+          
+          <h4>Junior/Mid Manager ($2,000-4,000 anuales):</h4>
+          <ul>
+            <li>2 trajes (gris carbón, azul marino)</li>
+            <li>8 camisas blancas/azul claro</li>
+            <li>3 corbatas conservadoras</li>
+            <li>2 pares zapatos oxford negros/marrones</li>
+            <li>1 reloj de calidad ($500-800)</li>
+            <li>Cinturones de cuero genuino</li>
+          </ul>
+
+          <h4>Senior Manager ($4,000-8,000 anuales):</h4>
+          <ul>
+            <li>4 trajes (incluir gris claro, checks sutiles)</li>
+            <li>12 camisas variadas</li>
+            <li>6 corbatas de seda italiana</li>
+            <li>3 pares zapatos premium</li>
+            <li>1 reloj de lujo ($1,500-3,000)</li>
+            <li>Accesorios de calidad (gemelos, pañuelos)</li>
+          </ul>
+
+          <h4>Director/VP ($8,000-15,000 anuales):</h4>
+          <ul>
+            <li>6 trajes (incluir sastrería personalizada)</li>
+            <li>18 camisas de algodón egipcio</li>
+            <li>Corbatas de diseñador</li>
+            <li>Zapatos hechos a mano</li>
+            <li>Reloj de inversión ($5,000+)</li>
+            <li>Casual Friday de lujo</li>
+          </ul>
+
+          <h3>🏷️ Marcas Recomendadas por Presupuesto</h3>
+          
+          <h4>Accesible pero profesional:</h4>
+          <ul>
+            <li><strong>Trajes:</strong> Banana Republic, J.Crew, Suit Supply</li>
+            <li><strong>Camisas:</strong> Charles Tyrwhitt, Brooks Brothers</li>
+            <li><strong>Zapatos:</strong> Cole Haan, Florsheim, Johnston & Murphy</li>
+            <li><strong>Relojes:</strong> Seiko, Citizen, Timex</li>
+          </ul>
+
+          <h4>Premium/Ejecutivo:</h4>
+          <ul>
+            <li><strong>Trajes:</strong> Hugo Boss, Canali, Ermenegildo Zegna</li>
+            <li><strong>Camisas:</strong> Eton, Paul Smith, Ralph Lauren Purple Label</li>
+            <li><strong>Zapatos:</strong> Allen Edmonds, Church's, Ferragamo</li>
+            <li><strong>Relojes:</strong> Omega, Tudor, TAG Heuer</li>
+          </ul>
+
+          <h4>Lujo/C-Suite:</h4>
+          <ul>
+            <li><strong>Trajes:</strong> Tom Ford, Brioni, Kiton</li>
+            <li><strong>Camisas:</strong> Charvet, Turnbull & Asser</li>
+            <li><strong>Zapatos:</strong> John Lobb, Berluti, Edward Green</li>
+            <li><strong>Relojes:</strong> Rolex, Patek Philippe, Audemars Piguet</li>
+          </ul>
+
+          <h3>🎯 Reglas de Oro del Vestir Ejecutivo</h3>
+          <ol>
+            <li><strong>Fit is King:</strong> Mejor un traje barato que te quede perfecto que uno caro mal ajustado</li>
+            <li><strong>Calidad en básicos:</strong> Invierte más en piezas que usas diario</li>
+            <li><strong>Mantenimiento:</strong> Ropa bien cuidada vale más que ropa cara descuidada</li>
+            <li><strong>Coherencia:</strong> Tu estilo debe ser predecible y confiable</li>
+            <li><strong>Contexto importa:</strong> Adapta el dress code a tu industria</li>
+          </ol>
+        `,
+        'networking_system': `
+          <h2>🚀 El Sistema de Networking de Alto Impacto</h2>
+          <p>Después de analizar los patrones de <strong>500 CEOs exitosos</strong>, hemos destilado un sistema probado que transforma desconocidos en aliados estratégicos.</p>
+
+          <h3>🎯 El Framework V.A.L.O.R</h3>
+          
+          <h4>V - Valor Primero</h4>
+          <p><strong>Principio:</strong> Siempre ofrece antes de pedir. El networking no es "¿qué puedes hacer por mí?" sino "¿cómo puedo ayudarte?"</p>
+          <ul>
+            <li>Comparte conocimiento relevante</li>
+            <li>Haz conexiones entre contactos</li>
+            <li>Ofrece tu expertise gratis inicialmente</li>
+            <li>Referencia oportunidades de negocio</li>
+          </ul>
+
+          <h4>A - Autenticidad</h4>
+          <p><strong>Principio:</strong> Conecta como persona, no como posición. Las relaciones genuinas superan las transaccionales.</p>
+          <ul>
+            <li>Comparte historias personales apropiadas</li>
+            <li>Muestra interés real en sus proyectos</li>
+            <li>Admite cuando no sabes algo</li>
+            <li>Sé consistente en todas las interacciones</li>
+          </ul>
+
+          <h4>L - Long-term (Largo Plazo)</h4>
+          <p><strong>Principio:</strong> Piensa en relaciones de años, no de meses. El networking es inversión, no especulación.</p>
+          <ul>
+            <li>Mantén contacto sin agenda específica</li>
+            <li>Celebra sus éxitos públicamente</li>
+            <li>Recuerda detalles personales importantes</li>
+            <li>Invierte tiempo en conocer su industria</li>
+          </ul>
+
+          <h4>O - Organización</h4>
+          <p><strong>Principio:</strong> Sistema para dar seguimiento consistente. El caos mata las relaciones.</p>
+          <ul>
+            <li>CRM personal (Notion, Airtable, HubSpot gratuito)</li>
+            <li>Recordatorios programados de seguimiento</li>
+            <li>Notas detalladas post-reunión</li>
+            <li>Categorización por industria/interés</li>
+          </ul>
+
+          <h4>R - Reciprocidad</h4>
+          <p><strong>Principio:</strong> Crea intercambios win-win sostenibles. El networking unidireccional se agota.</p>
+          <ul>
+            <li>Identifica qué necesita cada contacto</li>
+            <li>Desarrolla assets únicos para compartir</li>
+            <li>Facilita colaboraciones mutuamente beneficiosas</li>
+            <li>Mantén equilibrio en dar y recibir</li>
+          </ul>
+
+          <h3>📧 Plantillas de Email Probadas</h3>
+          
+          <h4>Primer contacto post-evento:</h4>
+          <blockquote>
+          <strong>Asunto:</strong> Seguimiento [Evento] - [Tema específico discutido]<br><br>
+          Hola [Nombre],<br><br>
+          Fue un placer conocerte en [evento] ayer. Me quedé pensando en tu comentario sobre [tema específico] - tienes razón en que [insight específico].<br><br>
+          Te adjunto el artículo sobre [tema] que mencioné. Creo que la sección sobre [detalle] te será especialmente útil para [su proyecto/desafío].<br><br>
+          ¿Te parece bien si te mantengo al tanto de eventos similares? Hay uno en [fecha] sobre [tema] que podría interesarte.<br><br>
+          Saludos,<br>
+          [Tu nombre]
+          </blockquote>
+
+          <h4>Seguimiento de valor (sin agenda):</h4>
+          <blockquote>
+          <strong>Asunto:</strong> Pensé en ti - [oportunidad/recurso específico]<br><br>
+          Hola [Nombre],<br><br>
+          Vi que [empresa/proyecto] lanzó [noticia] - ¡felicidades! Me recordó nuestra conversación sobre [tema].<br><br>
+          Por cierto, mi contacto en [empresa relevante] mencionó que están buscando exactamente lo que tú ofreces. ¿Te interesa que los conecte?<br><br>
+          Sin agenda de mi parte, solo pensé que podría ser mutuamente beneficioso.<br><br>
+          ¡Éxito!<br>
+          [Tu nombre]
+          </blockquote>
+
+          <h3>🎪 Scripts para Conversaciones en Eventos</h3>
+          
+          <h4>Apertura en networking events:</h4>
+          <p><strong>En lugar de:</strong> "¿A qué te dedicas?"<br>
+          <strong>Usar:</strong> "¿Qué te trae a [evento específico]?" o "¿Cuál ha sido tu experiencia más interesante aquí?"</p>
+
+          <h4>Transition natural para profundizar:</h4>
+          <p>"Interesante... cuéntame más sobre [detalle específico que mencionaron]"</p>
+
+          <h4>Para cerrar conversaciones elegantemente:</h4>
+          <p>"Ha sido fascinante conocer tu perspectiva sobre [tema]. Me encantaría continuar esta conversación - ¿te parece bien si te contacto la próxima semana?"</p>
+
+          <h3>📊 Métricas de Networking Exitoso</h3>
+          <ul>
+            <li><strong>Calidad > Cantidad:</strong> 5 relaciones profundas > 50 superficiales</li>
+            <li><strong>Response rate objetivo:</strong> 70%+ en primeros emails</li>
+            <li><strong>Seguimiento:</strong> Contacto cada 3-6 meses mínimo</li>
+            <li><strong>ROI esperado:</strong> 1 oportunidad significativa por cada 10 contactos nuevos/año</li>
+          </ul>
+
+          <h3>🚫 Errores que Matan el Networking</h3>
+          <ol>
+            <li><strong>Pitch inmediato:</strong> Vender en primer encuentro</li>
+            <li><strong>One-way communication:</strong> Solo hablar de ti</li>
+            <li><strong>Inconsistencia:</strong> Aparecer solo cuando necesitas algo</li>
+            <li><strong>Falta de preparación:</strong> No investigar antes de eventos</li>
+            <li><strong>No dar seguimiento:</strong> Dejar morir conexiones nuevas</li>
+          </ol>
+        `,
+        'international_protocol': `
+          <h2>🌍 Navegando el Laberinto Cultural Global</h2>
+          <p>Los errores de protocolo internacional cuestan <strong>$2.8 billones anuales</strong> en deals perdidos. Un gesto mal interpretado puede destruir meses de negociación.</p>
+
+          <h3>💰 Casos Reales de Errores Millonarios</h3>
+          
+          <h4>Caso 1: Japón - $45M perdidos</h4>
+          <p><strong>Error:</strong> CEO americano no intercambió tarjetas con ambas manos<br>
+          <strong>Resultado:</strong> Cliente japonés interpretó como falta de respeto total<br>
+          <strong>Consecuencia:</strong> Contrato cancelado inmediatamente</p>
+
+          <h4>Caso 2: Arabia Saudí - $23M perdidos</h4>
+          <p><strong>Error:</strong> Ejecutiva mostró suela del zapato durante reunión<br>
+          <strong>Resultado:</strong> Violación cultural grave (suela = suciedad)<br>
+          <strong>Consecuencia:</strong> Negociaciones terminadas sin explicación</p>
+
+          <h4>Caso 3: China - $67M perdidos</h4>
+          <p><strong>Error:</strong> Regalo de reloj en cierre de deal<br>
+          <strong>Resultado:</strong> En China, regalar relojes simboliza muerte<br>
+          <strong>Consecuencia:</strong> Contrato cancelado por "mal augurio"</p>
+
+          <h3>🏯 Asia: Protocolo para China, Japón, Corea</h3>
+          
+          <h4>✅ Reglas de Oro:</h4>
+          <ul>
+            <li><strong>Jerarquía es fundamental:</strong> Siempre saluda al más senior primero</li>
+            <li><strong>Tarjetas de presentación:</strong> Con ambas manos, leer detenidamente</li>
+            <li><strong>Nunca rechaces:</strong> Comida o bebida ofrecida (aunque sea simbólico)</li>
+            <li><strong>Cara/face:</strong> Jamás corrijas o contradigas públicamente</li>
+            <li><strong>Paciencia extrema:</strong> Las decisiones toman tiempo, no presiones</li>
+          </ul>
+
+          <h4>🎨 Códigos de Color:</h4>
+          <ul>
+            <li><strong>China - Suerte:</strong> Rojo (prosperidad), Dorado (riqueza)</li>
+            <li><strong>China - Evitar:</strong> Blanco (muerte), Negro (desgracia)</li>
+            <li><strong>Japón - Evitar:</strong> Números 4 y 9 (muerte)</li>
+          </ul>
+
+          <h4>🍽️ Protocolo de Mesa:</h4>
+          <ul>
+            <li><strong>Espera:</strong> Que el anfitrión inicie la comida</li>
+            <li><strong>Brindis:</strong> Con ambas manos, nunca rechaces</li>
+            <li><strong>Palillos:</strong> Nunca los claves en el arroz (ritual funerario)</li>
+            <li><strong>Plato limpio:</strong> En Japón es cumplido, en China deja un poco</li>
+          </ul>
+
+          <h3>🕌 Medio Oriente: Arabia Saudí, Emiratos, Qatar</h3>
+          
+          <h4>✅ Protocolos Esenciales:</h4>
+          <ul>
+            <li><strong>Mano derecha SIEMPRE:</strong> Comer, saludar, entregar (izquierda = impura)</li>
+            <li><strong>Plantas de pies:</strong> Nunca hacia alguien (grave insulto)</li>
+            <li><strong>Dress code estricto:</strong> Conservador obligatorio, mangas largas</li>
+            <li><strong>Viernes sagrado:</strong> No programar reuniones, es día de oración</li>
+            <li><strong>Ramadán:</strong> No comer/beber en público durante el día</li>
+          </ul>
+
+          <h4>👔 Vestimenta Apropiada:</h4>
+          <ul>
+            <li><strong>Hombres:</strong> Traje completo, corbata, mangas largas siempre</li>
+            <li><strong>Mujeres:</strong> Conservador total, brazos/piernas cubiertas, sin escotes</li>
+            <li><strong>Colores seguros:</strong> Azul marino, gris, negro</li>
+            <li><strong>Evitar:</strong> Ropa ajustada, transparente o llamativa</li>
+          </ul>
+
+          <h4>🤝 Protocolo de Reuniones:</h4>
+          <ul>
+            <li><strong>Puntualidad:</strong> Llega exactamente a tiempo (no temprano)</li>
+            <li><strong>Small talk:</strong> Obligatorio, puede durar 30+ minutos</li>
+            <li><strong>Jerarquía rígida:</strong> Dirígete al más senior exclusivamente</li>
+            <li><strong>Paciencia:</strong> Las decisiones van lentas, no presiones</li>
+          </ul>
+
+          <h3>🇪🇺 Europa: Reino Unido, Alemania, Francia</h3>
+          
+          <h4>🇬🇧 Reino Unido:</h4>
+          <ul>
+            <li><strong>Understatement:</strong> Modestia es virtud, no fanfarronees</li>
+            <li><strong>Queue culture:</strong> Respetar filas religiosamente</li>
+            <li><strong>Weather talk:</strong> Siempre un opener seguro</li>
+            <li><strong>Punctuality:</strong> 5 minutos temprano es perfecto</li>
+          </ul>
+
+          <h4>🇩🇪 Alemania:</h4>
+          <ul>
+            <li><strong>Extrema puntualidad:</strong> Llegar temprano es obligatorio</li>
+            <li><strong>Directness:</strong> Comunicación directa, no ofenderse</li>
+            <li><strong>Titles matter:</strong> Usar títulos académicos siempre</li>
+            <li><strong>Efficiency:</strong> Ir al grano, menos small talk</li>
+          </ul>
+
+          <h4>🇫🇷 Francia:</h4>
+          <ul>
+            <li><strong>Formal address:</strong> "Vous" hasta invitación de "tu"</li>
+            <li><strong>Lunch sacred:</strong> 2 horas, no interrumpir</li>
+            <li><strong>Intellectual discourse:</strong> Prepararse para debates profundos</li>
+            <li><strong>Style important:</strong> Vestir con elegancia francesa</li>
+          </ul>
+
+          <h3>🎁 Protocolo de Regalos por Región</h3>
+          
+          <h4>✅ Regalos Seguros Universalmente:</h4>
+          <ul>
+            <li>Artesanías locales de tu país</li>
+            <li>Libros de arte/cultura de tu región</li>
+            <li>Productos gourmet únicos</li>
+            <li>Artículos de marca reconocida (sin logo excesivo)</li>
+          </ul>
+
+          <h4>❌ Regalos que Evitar por Región:</h4>
+          <ul>
+            <li><strong>China:</strong> Relojes, flores blancas, espejos, cuchillos</li>
+            <li><strong>Japón:</strong> Número par de flores, regalos caros (obligación)</li>
+            <li><strong>Medio Oriente:</strong> Alcohol, productos de cerdo, íconos religiosos</li>
+            <li><strong>India:</strong> Productos de cuero de res, alcohol (depende región)</li>
+          </ul>
+
+          <h3>📅 Calendario Cultural: Fechas Críticas</h3>
+          <ul>
+            <li><strong>China:</strong> Año Nuevo Chino (Febrero) - 2 semanas sin negocios</li>
+            <li><strong>Medio Oriente:</strong> Ramadán (variable) - horarios especiales</li>
+            <li><strong>India:</strong> Diwali (Octubre/Noviembre) - Festival de luces</li>
+            <li><strong>Japón:</strong> Golden Week (Mayo) - semana de vacaciones</li>
+            <li><strong>Europa:</strong> Agosto - muchas empresas cerradas</li>
+          </ul>
+
+          <h3>🆘 Kit de Emergencia Cultural</h3>
+          <ol>
+            <li><strong>Research profundo:</strong> 2 horas mínimo sobre cultura antes de viajar</li>
+            <li><strong>Local guide:</strong> Contrata asesor cultural local</li>
+            <li><strong>Business cards:</strong> Traducidas al idioma local</li>
+            <li><strong>Dress code extra:</strong> Lleva opciones conservadoras</li>
+            <li><strong>Gifts backup:</strong> 2-3 opciones seguras siempre</li>
+          </ol>
+        `
+      };
+      
+      return content[guideId] || '<p>Contenido de guía no disponible. Contacta al administrador.</p>';
+    }
+
+    // Contenido de los artículos (editable aquí)
+    function getArticleContent(articleId) {
+      const content = {
+        'p1': `
+          <h2>🕰️ El Mercado de Relojes de Lujo en 2025</h2>
+          <p>El mercado de relojes de inversión ha experimentado un crecimiento del <strong>340% en los últimos 5 años</strong>, superando incluso al mercado inmobiliario en algunas categorías. Según nuestro análisis exclusivo de +15,000 transacciones:</p>
+          
+          <h3>Top 5 Relojes con Mejor ROI:</h3>
+          <ol>
+            <li><strong>Rolex Daytona Ceramic (2023)</strong> - ROI: +68% anual</li>
+            <li><strong>Patek Philippe Nautilus 5711</strong> - ROI: +45% anual</li>
+            <li><strong>Audemars Piguet Royal Oak</strong> - ROI: +42% anual</li>
+            <li><strong>Omega Speedmaster Profesional</strong> - ROI: +28% anual</li>
+            <li><strong>Tudor Black Bay</strong> - ROI: +25% anual</li>
+          </ol>
+
+          <h3>🎯 Estrategia de Inversión por Presupuesto</h3>
+          <p><strong>Presupuesto $3,000-$8,000:</strong> Tudor, Omega, y Breitling ofrecen la mejor relación valor-apreciación.</p>
+          <p><strong>Presupuesto $8,000-$25,000:</strong> Rolex Submariner, GMT-Master, y Datejust son inversiones sólidas.</p>
+          <p><strong>Presupuesto $25,000+:</strong> Patek Philippe, Audemars Piguet, y Vacheron Constantin para portfolios serios.</p>
+        `,
+        'p2': `
+          <h2>🤝 La Ciencia del Networking Auténtico</h2>
+          <p>Después de analizar las estrategias de <strong>500 CEOs de Fortune 500</strong>, hemos identificado 7 patrones que separan el networking exitoso del simple "intercambio de tarjetas".</p>
+
+          <h3>El Framework V.A.L.O.R:</h3>
+          <ul>
+            <li><strong>V - Valor Primero:</strong> Ofrece antes de pedir</li>
+            <li><strong>A - Autenticidad:</strong> Conecta como persona, no como posición</li>
+            <li><strong>L - Long-term:</strong> Piensa en relaciones de años, no de meses</li>
+            <li><strong>O - Organización:</strong> Sistema para dar seguimiento consistente</li>
+            <li><strong>R - Reciprocidad:</strong> Crea intercambios win-win sostenibles</li>
+          </ul>
+
+          <h3>📊 Datos que Importan</h3>
+          <p><strong>73% de los deals millonarios</strong> se originan en conversaciones casuales, no en presentaciones formales.</p>
+          <p><strong>El ejecutivo promedio</strong> mantiene relaciones activas con solo 47 contactos, pero los top performers gestionan +200.</p>
+
+          <blockquote style="border-left: 4px solid var(--brand); padding-left: 1rem; margin: 1.5rem 0; font-style: italic">
+            "No se trata de conocer más gente, sino de conocer mejor a la gente correcta." 
+            <br><em>- Reid Hoffman, Fundador LinkedIn</em>
+          </blockquote>
+        `,
+        'p3': `
+          <h2>👔 El Poder de la Imagen Ejecutiva</h2>
+          <p>Un estudio de Harvard Business School demostró que <strong>los ejecutivos bien vestidos ganan 20% más</strong> y reciben 3x más oportunidades de ascenso. Aquí está la ciencia detrás del vestir estratégico:</p>
+
+          <h3>La Fórmula del Armario Ejecutivo:</h3>
+          <p><strong>Base (70%):</strong> Piezas clásicas, atemporales, de calidad superior</p>
+          <p><strong>Tendencias (20%):</strong> Elementos actuales que muestren awareness cultural</p>
+          <p><strong>Personalidad (10%):</strong> Detalles únicos que reflejen tu marca personal</p>
+
+          <h3>Investment por Nivel Profesional:</h3>
+          <table style="width: 100%; margin: 1rem 0">
+            <tr><th>Posición</th><th>Presupuesto Anual</th><th>Piezas Clave</th></tr>
+            <tr><td>Junior/Mid Manager</td><td>$2,000-4,000</td><td>2 trajes, 8 camisas, 1 reloj</td></tr>
+            <tr><td>Senior Manager</td><td>$4,000-8,000</td><td>4 trajes, 12 camisas, 2 relojes, zapatos premium</td></tr>
+            <tr><td>Director/VP</td><td>$8,000-15,000</td><td>6 trajes, 18 camisas, reloj de lujo, accesorios</td></tr>
+            <tr><td>C-Suite</td><td>$15,000+</td><td>Wardrobe completo, sastrería personalizada</td></tr>
+          </table>
+        `,
+        'p4': `
+          <h2>✈️ Los Destinos que Construyen Redes</h2>
+          <p>Ciertos destinos actúan como <strong>hubs naturales de networking</strong>. Después de analizar los patrones de viaje de 1,000 ejecutivos exitosos, estos son los lugares donde ocurren las conexiones más valiosas:</p>
+
+          <h3>🏆 Top 10 Destinos para Networking Ejecutivo:</h3>
+          <ol>
+            <li><strong>Davos, Suiza</strong> - World Economic Forum (Enero)</li>
+            <li><strong>Jackson Hole, Wyoming</strong> - Fed Symposium (Agosto)</li>
+            <li><strong>Napa Valley, California</strong> - Wine industry + Tech</li>
+            <li><strong>The Hamptons, NY</strong> - Finance elite (Verano)</li>
+            <li><strong>Aspen, Colorado</strong> - Ideas Festival + Ski season</li>
+            <li><strong>Monaco</strong> - F1 Grand Prix + Yacht Week</li>
+            <li><strong>St. Moritz, Suiza</strong> - Private banking + Luxury</li>
+            <li><strong>Martha's Vineyard</strong> - Political + Media elites</li>
+            <li><strong>Courchevel, Francia</strong> - European business leaders</li>
+            <li><strong>Dubai</strong> - Middle East + Emerging markets</li>
+          </ol>
+
+          <p><strong>Pro Tip:</strong> El 67% de los deals se cierran en experiencias compartidas fuera de la oficina. Un safari en Kenia vale más que 10 reuniones en Manhattan.</p>
+        `,
+        'p5': `
+          <h2>🌍 Protocolo Internacional: Casos Reales</h2>
+          <p>Los errores culturales cuestan <strong>$2.8 billones anuales</strong> en deals perdidos. Aquí están los casos más costosos que hemos documentado:</p>
+
+          <h3>❌ Errores Millonarios Reales:</h3>
+          <p><strong>Caso 1 - Japón ($45M perdidos):</strong> CEO americano no intercambió tarjetas con ambas manos. El cliente japonés lo interpretó como falta de respeto y canceló el contrato.</p>
+
+          <p><strong>Caso 2 - Arabia Saudí ($23M perdidos):</strong> Ejecutiva mostró la suela del zapato durante reunión. Violación cultural grave que terminó las negociaciones.</p>
+
+          <p><strong>Caso 3 - China ($67M perdidos):</strong> Gift de reloj en cierre de deal. En China, regalar relojes simboliza muerte. El contrato se canceló inmediatamente.</p>
+
+          <h3>✅ Protocolo por Región:</h3>
+          <h4>Asia (China, Japón, Corea):</h4>
+          <ul>
+            <li>Jerarquía es fundamental - saluda al más senior primero</li>
+            <li>Tarjetas de presentación con ambas manos</li>
+            <li>Nunca rechaces comida o bebida ofrecida</li>
+            <li>Colores de suerte: rojo, dorado. Evita: blanco, negro</li>
+          </ul>
+
+          <h4>Medio Oriente:</h4>
+          <ul>
+            <li>Siempre con la mano derecha (izquierda es impura)</li>
+            <li>Evita mostrar plantas de pies</li>
+            <li>Dress code conservador obligatorio</li>
+            <li>Viernes = día sagrado, no programes reuniones</li>
+          </ul>
+        `,
+        'p6': `
+          <h2>💰 ROI de Experiencias vs. Objetos</h2>
+          <p>Nuestro estudio exclusivo con <strong>2,000 ejecutivos durante 3 años</strong> revela datos sorprendentes sobre qué inversiones generan mayor impacto en el status social y oportunidades de negocio.</p>
+
+          <h3>📊 Los Números No Mienten:</h3>
+          <table style="width: 100%; margin: 1.5rem 0">
+            <tr><th>Inversión</th><th>Costo Promedio</th><th>Conexiones Generadas</th><th>ROI Social</th></tr>
+            <tr><td>Rolex Submariner</td><td>$8,900</td><td>12 por año</td><td>45%</td></tr>
+            <tr><td>Viaje Kyoto Premium</td><td>$4,200</td><td>28 por viaje</td><td>73%</td></tr>
+            <tr><td>Tesla Model S</td><td>$95,000</td><td>8 por año</td><td>22%</td></tr>
+            <tr><td>Masterclass Golf Privada</td><td>$1,800</td><td>35 por evento</td><td>89%</td></tr>
+          </table>
+
+          <h3>🎯 Por Qué las Experiencias Ganan:</h3>
+          <ol>
+            <li><strong>Storytelling Power:</strong> "Mi viaje a Bhután..." vs "Mi nuevo reloj..."</li>
+            <li><strong>Shared Memories:</strong> Bonding emocional más fuerte</li>
+            <li><strong>Network Effect:</strong> Conoces gente EN la experiencia</li>
+            <li><strong>Conversation Starters:</strong> Durán años, no meses</li>
+          </ol>
+
+          <p><strong>La Fórmula Ganadora:</strong> 70% experiencias, 30% objetos de alta calidad. Los objetos sostienen la percepción, las experiencias crean las conexiones.</p>
+        `
+      };
+      
+      return content[articleId] || '<p>Contenido no disponible. Contacta al administrador.</p>';
+    }
+
+    // Sistema de membresía mejorado
+    const PAY_KEY = 'sc-membership';
+    function isMember(){ 
+      const membership = localStorage.getItem(PAY_KEY);
+      return membership === 'elite' || membership === 'basic'; 
+    }
+    function getMembershipLevel(){ 
+      return localStorage.getItem(PAY_KEY) || 'none'; 
+    }
+    
+    function openPaywall(){ 
+      el('#paywall').classList.add('open');
+      track('paywall_opened', {trigger: event.target.dataset.content || 'unknown'});
+    }
+    
+    function closePaywall(){ 
+      el('#paywall').classList.remove('open');
+      track('paywall_closed', {});
+    }
+
+    // Event listeners para paywall (usando delegación de eventos)
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('[data-open-paywall]') || e.target.closest('[data-open-paywall]')) {
+        const trigger = e.target.matches('[data-open-paywall]') ? e.target : e.target.closest('[data-open-paywall]');
+        
+        if(isMember()){
+          alert(`✅ Acceso concedido - Miembro ${getMembershipLevel().toUpperCase()}`);
+          track('premium_access_granted', {level: getMembershipLevel()});
+        } else { 
+          openPaywall(); 
+        }
+      }
+    });
+
+    // Event listeners para cerrar paywall y suscripción a planes (usando delegación)
+    document.addEventListener('click', (e) => {
+      // Cerrar paywall
+      if (e.target.matches('#closePaywall')) {
+        closePaywall();
+        return;
+      }
+      
+      // Suscripción a planes
+      if (e.target.matches('[data-plan]')) {
+        const btn = e.target;
+        const plan = btn.dataset.plan;
+        localStorage.setItem(PAY_KEY, plan);
+        closePaywall();
+        
+        // Simulación de proceso de pago
+        btn.innerHTML = 'Procesando...';
+        btn.disabled = true;
+        
+        setTimeout(() => {
+          alert(`🎉 ¡Bienvenido a StatusClub ${plan.toUpperCase()}! 
+
+✅ Tu suscripción está activa
+📧 Revisa tu email para acceso inmediato  
+🎯 Accede ya a todo el contenido premium
+
+Valor de tu plan: ${plan === 'elite' ? '$39/mes' : '$9/mes'}`);
+          
+          track('subscribe', {plan, value: plan === 'elite' ? 39 : 9});
+          btn.innerHTML = plan === 'elite' ? 'Comenzar Elite' : 'Comenzar Básico';
+          btn.disabled = false;
+        }, 2000);
+        return;
+      }
+    });
+
+    // Newsletter y contacto mejorados
+    const LEADS_KEY = 'sc-leads';
+    function setLeads(arr){ localStorage.setItem(LEADS_KEY, JSON.stringify(arr)); }
+    function getLeads(){ return JSON.parse(localStorage.getItem(LEADS_KEY) || '[]'); }
+
+    // Newsletter
+    el('#formNewsletter')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const email = el('#email');
+      const msg = el('#msg');
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      
+      if(!email.checkValidity()){ 
+        msg.textContent = '❌ Por favor ingresa un email válido.'; 
+        email.focus(); 
+        return; 
+      }
+      
+      // Simular envío
+      submitBtn.innerHTML = 'Suscribiendo...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        const list = getLeads(); 
+        list.push({
+          type:'newsletter', 
+          email: email.value.trim(), 
+          at: Date.now(),
+          source: 'website'
+        }); 
+        setLeads(list);
+        
+        msg.textContent = '🎉 ¡Perfecto! Te has suscrito al newsletter exclusivo.';
+        msg.style.color = 'var(--good)';
+        
+        // Actualizar contador
+        const currentCount = 8950 + list.filter(l => l.type === 'newsletter').length;
+        el('#suscritos').textContent = currentCount.toLocaleString('es-MX');
+        
+        track('lead', {source:'newsletter', email: email.value});
+        
+        email.value = '';
+        submitBtn.innerHTML = 'Suscribirme';
+        submitBtn.disabled = false;
+      }, 1500);
+    });
+
+    // Contacto
+    el('#formContacto')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const nombre = el('#nombre');
+      const empresa = el('#empresa');
+      const mensaje = el('#mensaje');
+      const msgOut = el('#msgContacto');
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      
+      if(!nombre.value.trim() || !mensaje.value.trim()){ 
+        msgOut.textContent = '❌ Por favor completa los campos requeridos.'; 
+        msgOut.style.color = 'var(--bad)';
+        return; 
+      }
+      
+      // Simular envío
+      submitBtn.innerHTML = 'Enviando...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        const list = getLeads(); 
+        list.push({
+          type:'contact', 
+          name: nombre.value.trim(), 
+          company: empresa.value.trim(),
+          message: mensaje.value.trim(), 
+          at: Date.now()
+        }); 
+        setLeads(list);
+        
+        msgOut.textContent = '✅ Mensaje enviado correctamente. Te responderemos en 24-48 horas.';
+        msgOut.style.color = 'var(--good)';
+        
+        track('contact', {name: nombre.value.trim(), hasCompany: !!empresa.value.trim()});
+        
+        nombre.value = ''; 
+        empresa.value = '';
+        mensaje.value = '';
+        submitBtn.innerHTML = 'Enviar mensaje';
+        submitBtn.disabled = false;
+      }, 1500);
+    });
+
+    // Inicialización
+    function init(){
+      document.getElementById('year').textContent = new Date().getFullYear();
+      applyFilters();
+      renderPosts();
+      
+      // Track page load
+      track('page_load', {
+        url: location.href,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent
+      });
+    }
+
+    // Auto-save analytics
+    setInterval(sendAnalytics, 30000);
+    
+    // Send analytics on page unload
+    window.addEventListener('beforeunload', sendAnalytics);
+    
+    // Initialize when DOM is ready
+    if(document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
